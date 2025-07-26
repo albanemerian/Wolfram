@@ -1,0 +1,34 @@
+name: wolfram
+version: 0.1.0.0
+github: "githubuser/wolfram"
+license: BSD3
+author: "Author name"
+maintainer: "email@example.com"
+synopsis: "Wolfram project"
+description: "Wolfram project description"
+category: Development
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: .
+
+executables:
+  wolfram:
+    main: main.hs
+    source-dirs: .
+    exposed-modules:
+    - Parse
+    - Print
+
+tests:
+  wolfram-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+    - base
+    - hspec
+    - wolfram
+    - silently
+
